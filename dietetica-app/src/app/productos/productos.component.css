@@ -42,3 +42,12 @@ td {
 tr:nth-child(even) {
   background-color: #f1f8e9;
 }
+
+.disponible {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.sin-stock {
+  color: #c62828;
+}

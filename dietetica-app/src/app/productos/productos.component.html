@@ -16,12 +16,20 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let producto of productos">
-        <td>{{ producto.nombre }}</td>
-        <td>{{ producto.categoria }}</td>
-        <td>${{ producto.precio }}</td>
-        <td>{{ producto.disponible ? 'Sí' : 'No' }}</td>
-      </tr>
+      @for (producto of productos; track producto.nombre) {
+        <tr>
+          <td>{{ producto.nombre }}</td>
+          <td>{{ producto.categoria }}</td>
+          <td>{{ producto.precio | currency:'ARS':'symbol':'1.0-0' }}</td>
+          <td>
+            @if (producto.disponible) {
+              <span class="disponible">Disponible</span>
+            } @else {
+              <span class="sin-stock">Sin stock</span>
+            }
+          </td>
+        </tr>
+      }
     </tbody>
   </table>
 </div>
