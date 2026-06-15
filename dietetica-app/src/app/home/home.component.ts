@@ -6,7 +6,22 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  titulo = 'Dietética Salud Natural';
-  bienvenida = 'Bienvenido a nuestra tienda de productos naturales y saludables.';
-  descripcion = 'Ofrecemos una amplia variedad de productos dietéticos, suplementos y alimentos naturales para cuidar tu salud.';
+
+  categorias = [
+    {
+      emoji: '🌾',
+      nombre: 'Cereales',
+      descripcion: 'Avena, granola y granos integrales para tu energía diaria.'
+    },
+    {
+      emoji: '🥜',
+      nombre: 'Frutos Secos',
+      descripcion: 'Almendras, nueces y frutos llenos de grasas saludables.'
+    },
+    {
+      emoji: '🌱',
+      nombre: 'Semillas',
+      descripcion: 'Chía y mix de semillas ricas en omega 3 y fibra natural.'
+    }
+  ];
 }

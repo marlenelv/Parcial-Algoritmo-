@@ -1,37 +1,46 @@
+<!-- Menú de navegación -->
 <nav>
-  <a routerLink="/">Inicio</a>
-  <a routerLink="/productos">Productos</a>
+  <span class="logo">🌿 Salud Natural</span>
+  <div class="nav-links">
+    <a routerLink="/">Inicio</a>
+    <a routerLink="/productos">Productos</a>
+  </div>
 </nav>
 
-<div class="contenido">
+<!-- Banner de sección -->
+<div class="banner">
   <h2>Nuestros Productos</h2>
+  <p>Alimentos naturales seleccionados para tu bienestar</p>
+</div>
 
-  <div class="tabla-contenedor">
-  <table>
-    <thead>
-      <tr>
-        <th>Nombre</th>
-        <th>Categoría</th>
-        <th>Precio</th>
-        <th>Disponible</th>
-      </tr>
-    </thead>
-    <tbody>
-      @for (producto of productos; track producto.nombre) {
-        <tr>
-          <td>{{ producto.nombre }}</td>
-          <td>{{ producto.categoria }}</td>
-          <td>{{ producto.precio | currency:'ARS':'symbol':'1.0-0' }}</td>
-          <td>
-            @if (producto.disponible) {
-              <span class="disponible">Disponible</span>
-            } @else {
-              <span class="sin-stock">Sin stock</span>
-            }
-          </td>
-        </tr>
-      }
-    </tbody>
-  </table>
+<!-- Contenido -->
+<div class="contenido">
+  <p class="contador">Mostrando {{ productos.length }} productos</p>
+
+  <div class="cards-grid">
+    @for (producto of productos; track producto.nombre) {
+      <div class="card" [class.sin-stock-card]="!producto.disponible">
+
+        <img [src]="producto.imagen" [alt]="producto.nombre" class="card-imagen">
+
+        <div class="card-info">
+          <span class="categoria-tag">{{ producto.categoria }}</span>
+          <h3>{{ producto.nombre }}</h3>
+          <p class="precio">{{ producto.precio | currency:'ARS':'symbol':'1.0-0' }}</p>
+
+          @if (producto.disponible) {
+            <span class="badge disponible">● Disponible</span>
+          } @else {
+            <span class="badge sin-stock">● Sin stock</span>
+          }
+        </div>
+
+      </div>
+    }
   </div>
 </div>
+
+<!-- Footer -->
+<footer>
+  <p>🌿 Dietética Salud Natural — © 2025</p>
+</footer>

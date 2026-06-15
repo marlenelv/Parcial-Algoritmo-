@@ -1,12 +1,83 @@
+<!-- Menú de navegación -->
 <nav>
-  <a routerLink="/">Inicio</a>
-  <a routerLink="/productos">Productos</a>
+  <span class="logo">🌿 Salud Natural</span>
+  <div class="nav-links">
+    <a routerLink="/">Inicio</a>
+    <a routerLink="/productos">Productos</a>
+  </div>
 </nav>
 
-<div class="contenido">
-  <div class="tarjeta">
-    <h1>{{ titulo }}</h1>
-    <p class="bienvenida">{{ bienvenida }}</p>
-    <p>{{ descripcion }}</p>
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-contenido">
+    <span class="hero-icono">🌿</span>
+    <h1>Dietética Salud Natural</h1>
+    <p class="bienvenida">Bienvenido a nuestra tienda de productos naturales y saludables.</p>
+    <p class="descripcion">
+      Ofrecemos una amplia variedad de productos dietéticos y alimentos naturales
+      para cuidar tu salud y bienestar.
+    </p>
+    <a routerLink="/productos" class="btn-ver">Ver Productos →</a>
   </div>
-</div>
+</section>
+
+<!-- Estadísticas -->
+<!-- <section class="estadisticas">
+  <div class="stat">
+    <span class="stat-numero">8</span>
+    <span class="stat-label">Productos</span>
+  </div>
+  <div class="stat-separador"></div>
+  <div class="stat">
+    <span class="stat-numero">4</span>
+    <span class="stat-label">Categorías</span>
+  </div>
+  <div class="stat-separador"></div>
+  <div class="stat">
+    <span class="stat-numero">🚚</span>
+    <span class="stat-label">Envío gratis</span>
+  </div>
+</section> -->
+
+<!-- Beneficios -->
+<!-- <section class="beneficios">
+  <h2>¿Por qué elegirnos?</h2>
+  <div class="beneficios-grid">
+    <div class="beneficio">
+      <span class="icono">🌿</span>
+      <h3>100% Natural</h3>
+      <p>Productos sin aditivos ni conservantes artificiales.</p>
+    </div>
+    <div class="beneficio">
+      <span class="icono">✅</span>
+      <h3>Calidad garantizada</h3>
+      <p>Seleccionamos los mejores productos del mercado.</p>
+    </div>
+    <div class="beneficio">
+      <span class="icono">🚚</span>
+      <h3>Envío rápido</h3>
+      <p>Recibí tu pedido en el menor tiempo posible.</p>
+    </div>
+  </div>
+</section> -->
+
+<!-- Categorías destacadas -->
+<!-- <section class="categorias">
+  <h2>Nuestras Categorías</h2>
+  <div class="categorias-grid">
+    @for (cat of categorias; track cat.nombre) {
+      <div class="categoria-card">
+        <span class="cat-emoji">{{ cat.emoji }}</span>
+        <h3>{{ cat.nombre }}</h3>
+        <p>{{ cat.descripcion }}</p>
+      </div>
+    }
+  </div>
+</section> -->
+
+<!-- Footer -->
+<footer>
+  <p class="footer-nombre">🌿 Dietética Salud Natural</p>
+  <p class="footer-info">📍 Buenos Aires, Argentina &nbsp;|&nbsp; 📞 (011) 4123-4567</p>
+  <p class="footer-copy">© 2026 Dietética Salud Natural. Todos los derechos reservados.</p>
+</footer>

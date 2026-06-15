@@ -1,90 +1,183 @@
-/* ── Menú de navegación ── */
+/* ── Navegación ── */
 nav {
-  background-color: #2e7d32;
-  padding: 14px 24px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--verde-oscuro);
+  padding: 14px 36px;
+  box-shadow: 0 2px 8px var(--sombra);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-nav a {
-  color: white;
+.logo {
+  color: var(--blanco);
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.nav-links a {
+  color: var(--blanco);
   text-decoration: none;
-  margin-right: 20px;
-  font-size: 16px;
-  padding: 6px 12px;
-  border-radius: 4px;
+  margin-left: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 7px 16px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
 }
 
-nav a:hover {
-  background-color: #4caf50;
+.nav-links a:hover {
+  background-color: var(--verde-medio);
 }
 
-/* ── Contenedor principal ── */
-.contenido {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-h2 {
-  color: #2e7d32;
-  font-size: 26px;
+/* ── Banner ── */
+.banner {
+  background: linear-gradient(135deg, #1b5e20, #388e3c);
+  color: var(--blanco);
   text-align: center;
+  padding: 48px 20px 40px;
+}
+
+.banner h2 {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  margin-bottom: 8px;
+}
+
+.banner p {
+  font-size: 15px;
+  opacity: 0.85;
+}
+
+/* ── Contenedor ── */
+.contenido {
+  max-width: 1200px;
+  margin: 36px auto;
+  padding: 0 28px;
+}
+
+.contador {
+  color: var(--texto-suave);
+  font-size: 14px;
+  font-weight: 600;
   margin-bottom: 24px;
+  text-align: right;
 }
 
-/* ── Tabla ── */
-.tabla-contenedor {
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+/* ── Grilla de cards ── */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 26px;
+}
+
+/* ── Card individual ── */
+.card {
+  background-color: var(--blanco);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px var(--sombra);
   overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s;
+  border-top: 4px solid var(--verde-medio);
 }
 
-table {
+.card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 28px var(--sombra-hover);
+}
+
+.sin-stock-card {
+  opacity: 0.72;
+}
+
+/* ── Imagen ── */
+.card-imagen {
   width: 100%;
-  border-collapse: collapse;
+  height: 200px;
+  object-fit: cover;
+  background-color: var(--verde-claro);
+  display: block;
 }
 
-th {
-  background-color: #2e7d32;
-  color: white;
-  padding: 14px 16px;
-  text-align: left;
-  font-size: 15px;
+/* ── Información ── */
+.card-info {
+  padding: 18px;
 }
 
-td {
-  padding: 12px 16px;
-  border-bottom: 1px solid #e8f5e9;
-  font-size: 15px;
+.categoria-tag {
+  display: inline-block;
+  background-color: var(--verde-suave);
+  color: var(--verde-oscuro);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
 }
 
-tr:last-child td {
-  border-bottom: none;
+.card-info h3 {
+  color: #1a3a1b;
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 8px;
 }
 
-tr:nth-child(even) {
-  background-color: #f1f8e9;
+.precio {
+  color: var(--verde-oscuro);
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 12px;
 }
 
-tr:hover {
-  background-color: #e8f5e9;
+/* ── Badges ── */
+.badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
 }
 
-/* ── Badges de disponibilidad ── */
 .disponible {
-  background-color: #e8f5e9;
-  color: #2e7d32;
-  font-weight: bold;
-  padding: 4px 10px;
-  border-radius: 12px;
-  font-size: 13px;
+  background-color: var(--verde-claro);
+  color: #1b5e20;
 }
 
 .sin-stock {
   background-color: #ffebee;
   color: #c62828;
-  padding: 4px 10px;
-  border-radius: 12px;
-  font-size: 13px;
+}
+
+/* ── Footer ── */
+footer {
+  background-color: var(--verde-oscuro);
+  color: var(--blanco);
+  text-align: center;
+  padding: 24px 20px;
+  font-size: 14px;
+  margin-top: 40px;
+  opacity: 0.95;
+}
+
+/* ── Responsive tablet ── */
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ── Responsive celular ── */
+@media (max-width: 480px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .banner h2 {
+    font-size: 24px;
+  }
 }

@@ -1,3 +1,16 @@
+:root {
+  --verde-oscuro:  #2e7d32;
+  --verde-medio:   #4caf50;
+  --verde-claro:   #e8f5e9;
+  --verde-suave:   #f1f8e9;
+  --fondo:         #f5f5f5;
+  --blanco:        #ffffff;
+  --texto:         #333333;
+  --texto-suave:   #666666;
+  --sombra:        rgba(0, 0, 0, 0.10);
+  --sombra-hover:  rgba(0, 0, 0, 0.18);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +18,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
+  font-family: 'Nunito', Arial, sans-serif;
+  background-color: var(--fondo);
+  color: var(--texto);
 }
