@@ -6,9 +6,22 @@
 <div class="contenido">
   <h2>Nuestros Productos</h2>
 
-  <ul>
-    <li *ngFor="let producto of productos">
-      {{ producto.nombre }} — ${{ producto.precio }}
-    </li>
-  </ul>
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Categoría</th>
+        <th>Precio</th>
+        <th>Disponible</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let producto of productos">
+        <td>{{ producto.nombre }}</td>
+        <td>{{ producto.categoria }}</td>
+        <td>${{ producto.precio }}</td>
+        <td>{{ producto.disponible ? 'Sí' : 'No' }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>

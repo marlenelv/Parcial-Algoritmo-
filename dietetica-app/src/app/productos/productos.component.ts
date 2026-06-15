@@ -1,15 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Producto } from '../producto.interface';
+import { ProductoService } from '../producto.service';
 
 @Component({
   selector: 'app-productos',
   templateUrl: './productos.component.html',
   styleUrl: './productos.component.css'
 })
-export class ProductosComponent {
-  productos = [
-    { nombre: 'Proteína Whey', precio: 3500 },
-    { nombre: 'Vitamina C', precio: 800 },
-    { nombre: 'Omega 3', precio: 1200 },
-    { nombre: 'Multivitamínico', precio: 950 }
-  ];
+export class ProductosComponent implements OnInit {
+
+  productos: Producto[] = [];
+
+  constructor(private productoService: ProductoService) {}
+
+  ngOnInit(): void {
+    this.productos = this.productoService.getProductos();
+  }
 }
