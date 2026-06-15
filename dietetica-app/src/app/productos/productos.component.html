@@ -1,0 +1,14 @@
+<nav>
+  <a routerLink="/">Inicio</a>
+  <a routerLink="/productos">Productos</a>
+</nav>
+
+<div class="contenido">
+  <h2>Nuestros Productos</h2>
+
+  <ul>
+    <li *ngFor="let producto of productos">
+      {{ producto.nombre }} — ${{ producto.precio }}
+    </li>
+  </ul>
+</div>

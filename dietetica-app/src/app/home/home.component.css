@@ -1,0 +1,30 @@
+nav {
+  background-color: #4caf50;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  font-size: 16px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.contenido {
+  padding: 30px;
+  text-align: center;
+}
+
+h1 {
+  color: #2e7d32;
+  font-size: 32px;
+}
+
+.bienvenida {
+  font-size: 18px;
+  color: #555;
+}

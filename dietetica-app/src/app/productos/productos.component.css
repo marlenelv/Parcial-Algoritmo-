@@ -1,0 +1,36 @@
+nav {
+  background-color: #4caf50;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  font-size: 16px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.contenido {
+  padding: 30px;
+}
+
+h2 {
+  color: #2e7d32;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #f1f8e9;
+  margin: 8px 0;
+  padding: 10px 15px;
+  border-left: 4px solid #4caf50;
+  font-size: 16px;
+}
