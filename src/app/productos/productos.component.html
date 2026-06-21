@@ -21,7 +21,7 @@
     @for (producto of productos; track producto.nombre) {
       <div class="card" [class.sin-stock-card]="!producto.disponible">
 
-        <img [src]="producto.imagen" [alt]="producto.nombre" class="card-imagen">
+        <!-- <img [src]="producto.imagen" [alt]="producto.nombre" class="card-imagen"> -->
 
         <div class="card-info">
           <span class="categoria-tag">{{ producto.categoria }}</span>
