@@ -1,47 +1,27 @@
-# Primer Parcial - Parte Práctica
+# DieteticaApp
 
-## Descripción
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
 
-Este proyecto consiste en el desarrollo de una aplicación web sencilla utilizando **Angular**, con el objetivo de gestionar y visualizar información de una entidad elegida, aplicando los conceptos trabajados durante la cursada.
+## Development server
 
-## Funcionalidades
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-La aplicación cuenta con dos secciones principales:
+## Code scaffolding
 
-### Página Principal
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-* Mensaje de bienvenida.
-* Breve descripción del sistema.
-* Menú de navegación para acceder a las distintas páginas.
+## Build
 
-### Página de Listado
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-* Visualización de los elementos obtenidos desde un servicio.
-* Presentación mediante tarjetas, tablas o listas.
-* Cada elemento posee al menos tres atributos o datos.
+## Running unit tests
 
-## Requisitos Técnicos
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-* Definir una **interface** para representar la entidad elegida.
-* Crear un **servicio** con una lista de elementos precargados.
-* Configurar el **ruteo** entre la página principal y la página de listado.
-* Utilizar **interpolación** para mostrar información en la vista.
-* Implementar la directiva **@for** para recorrer la lista de elementos.
-* Utilizar la directiva **@if** para mostrar condiciones sobre los datos.
-* Aplicar al menos un **Pipe** para formatear la información.
+## Running end-to-end tests
 
-## Criterios de Evaluación
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-* Correcta implementación de la interface.
-* Funcionamiento adecuado del servicio.
-* Configuración correcta del ruteo.
-* Uso apropiado de componentes.
-* Aplicación de Binding, Directivas y Pipes.
-* Diseño visual, organización de la interfaz y uso de CSS.
-* Funcionamiento general de la aplicación.
+## Further help
 
-## Entrega
-
-La entrega se realiza mediante un enlace al repositorio de **GitHub**, enviado a través de **Microsoft Teams**.
-
-**Fecha límite:** 22 de junio de 2026 – 18:00 hs.
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
